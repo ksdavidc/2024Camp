@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Shark & Bear
+
+<img src="Camp/attachments/dc35dec5d02333ec12b22dd40f59d73f_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+ 
+
+
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#fake </p>
+<p>A Popular Hoax Released On April Fools Day By <em>Heart Of Vancouver.</em>**</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Great White Shark Catching Seal
+
+<img src="Camp/attachments/563e61941b5c9f35bb7b87fac46013aa_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p><strong>Great White Shark Breaching Water To Catch A Seal (Author: Chris &amp; Monique Fallows, &lt;<a href="http://www.apexpredators.com&gt;">www.apexpredators.com&gt;</a>)</strong></p>
+<p>Chris and Monique Fallows have been photographing <a href="https://welovesharks.club/great-white-shark/">great white sharks</a> for over  20 years now. And they say that although the difficulties in getting the right shots can be great, the rewards are even greater.</p>
+<p>Many of the scenes they capture involve a stunning display in the battle of survival between great whites and the fur seals of Seal Island. They call this spot <strong>“the ring of peril.”</strong> It’s a stretch of water above an underwater gully alongside Seal Island, South Africa.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Shark in Subway in Toronto
+
+<img src="Camp/attachments/946c213f6fcb60e667cbd87881ef8667_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#fake</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+#### Shark in the Streets of Puerto Rico
+
+<img src="Camp/attachments/04dca38dda2a9f5d4979414109cf6873_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#fake</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+#### Shark Jumping out of Water
+
+<img src="Camp/attachments/7b209a75b37567bc14768abdf06ba02c_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+
+</div>
+
+  
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Shark Attacks Helicopter
+
+<img src="Camp/attachments/870dfb18ccd7abcf98089a368b1cd72a_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>This picture has got to be the most infamous of them all. It gives the impression that a large great white shark is leaping out of the ocean and is about to attack military personnel climbing a ladder dangling from a Special Forces UH-60 Black Hawk helicopter.</p>
+<p>It was extremely popular back in 2001 and was widely circulated as an email. The email even alleged that <a href="http://news.nationalgeographic.com/news/2002/08/0815_020815_photooftheyear.html">National Geographic</a> had awarded it the Photo of the Year award. As expected, the image gained popularity till it was finally revealed to be an Internet hoax.</p>
+<p>There were suspicions that it might be fake when people realized that the image looked so much like a scene from the 1996 <em>Batman</em> movie. In that scene, <em>Batman</em> was attacked by a shark while climbing a helicopter ladder.</p>
+<p>t’s actually two pictures that were merged to produce a remarkable looking final image.</p>
+<img src="Camp/attachments/4e39b24ae5d85c6231b23ba0d4e36266_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+
+<p>The first (above) is the picture of a military drill (in front of the Golden Gate Bridge), while the second one (below) shows a shark jumping out of the ocean (False Bay, South Africa).</p>
+<img src="Camp/attachments/7b209a75b37567bc14768abdf06ba02c_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill"></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Collapsed Shark Tank At Scientific Center, Kuwait
+
+<img src="Camp/attachments/1cd4e291f3e1ec33536593b335d3b55a_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real  </p>
+<p>The photograph shows sharks swimming at the bottom of an escalator after the collapse of a shark tank. The same image popped up again after Hurricane Sandy raising serious doubts about its credibility.</p>
+<p>Yes, there are shark tanks at the <a href="http://www.tsck.org.kw/">Kuwait Scientific Center</a> but they are intact.</p>
+<p>Also, the real picture actually shows a portion of Toronto’s Union Station that was flooded with rainwater and sewage back in June 2012. The neighboring Toronto Royal Bank Plaza complex was also affected by the flood.</p>
+<img src="Camp/attachments/671df991a37d3a78060fe66956159d02_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill"></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Scuba Diving Couple, Great White Behind Them
+
+<img src="Camp/attachments/ae358963c8c4a4aa27655383025f7762_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#fake<br>Sharks are awesome creatures, we know that already. But people still fear them. In fact, they fear them a whole lot. However, that doesn’t stop them from being fascinated with shark ‘sightings’ and pictures. This combination of fear and fascination creates the perfect platform for the continuous circulation of  fake shark pictures.</p>
+<p>Now, add other factors to the mix like extreme weather, and the power of the internet (especially social media) and things can easily get out of hand.</p>
+<p>Many of these pictures come out just after a major disturbance like a flood or storm. And we don’t know why people take the time to create and share these fake shark pictures; maybe to create a sense of crisis, generate fake traffic to their blogs or social media accounts, etc. but for sure they can be pretty annoying and some actually look genuine.</p>
+<p>Let’s look at a few of the most popular fake shark pictures out there and then we’ll put our detective hats on and learn how to determine if a shark picture is fake.</p>
+<p>According to the story, a couple along with their teenage son were vacationing in Australia.  They went scuba diving and the couple posed for a picture. Just before snapping the picture, the father notices that his son, who is holding the camera,  looks frightened. The father asked him if there was anything wrong. The boy says ‘No,’ then he quickly takes the picture and begins to swim frantically away so his worried parents follow him out of the water.</p>
+<p>Back on the boat, their son tells them that a large great white shark had swum up behind them while he was snapping. Of course they don’t believe him until they get back to their hotel room and upload the image on their computer.</p>
+<p>This picture, and story, became very popular on the internet mainly due to the clever use of the creator’s Photoshop skills. Also, the couple appear to be completely unaware of the massive shark behind them, and the shark is smiling as it poses for the picture too. Very creepy stuff indeed.</p>
+<p>Below is the original shark photo that was used to create the image.</p>
+<img src="Camp/attachments/cb5750ae7443c9d7a1e30c81a262e5ce_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill">
+
+
+<p>It was originally uploaded on Wikimedia Commons by Hermanus Backpackers, South Africa. You can clearly see that the image was manipulated to look so much larger than the couple.</p>
+<p>The same image was used to create even more fake shark pictures like the one below.</p>
+<p><em>This particular shark must really like pictures. Hmm.</em></p>
+<img src="Camp/attachments/a67c51cf7aba72bab203793b68baf921_MD5.png" alt="" style="width: px; height: 200px; object-fit: fill"></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### White Shark and Seal
+
+<img src="Camp/attachments/793f6d819e83dce1fa7fa55038cf6039_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p>You can literally see the look of terror on the face of that seal as it realizes that this is likely the end of the road for it.</p>
+<p>These pictures are just a few of many more you can find by checking out the photographers’ website on the links above. They just go to show how majestic, magnificent, and evolved these sharks are in their natural environments.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+#### Tiger Shark
+
+<img src="Camp/attachments/fd71d1e6b85ad443f6553bf9b0a3a6e7_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p>This female <a href="https://welovesharks.club/tiger-shark/">tiger shark</a> is named “Emma” and she’s somewhat a local favorite at her native habitat in the waters off Tiger Beach, Bahamas.</p>
+<p>In fact, she “rules” the waters there. She shows off her pregnant belly in this photo.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Seal Balanced on Shark's Nose
+
+<img src="Camp/attachments/3df1fce0248c99b31765ac18168be448_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p>In the constant battle for survival, only the fittest (and sometimes the luckiest), survive.</p>
+<p>Chris has witnessed seals that were almost right in the jaws of great whites using the teeth of the shark as a leverage in a final push to escape the closing jaws.</p>
+<p>In this particular photo, surprisingly the seal never gave up and somehow managed to escape.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Whale Shark from Above
+
+<img src="Camp/attachments/3f812ba15f090c5bfef1797c4efe2cab_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p>In this magical-looking shot of a <a href="https://welovesharks.club/species-profile-whale-shark/">whale shark</a> from above, the shark almost appears to glow in the stark black, white, and gray photo.</p>
+<p>Getting these kind of real shark photos is a matter of determination and skill and often times being in the right place at the right time.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Shark in Sunset
+
+<img src="Camp/attachments/c41e24f3ab6a5779e76dc36083f2f597_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+</div>
+
+  
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real </p>
+<p>With the dawn of each new day, the great whites near Seal Island prepare to fly in pursuit of seals.</p>
+<p>To get this particular picture, Chris needed the shark to clear the water completely. Eventually this shot happened after hundreds of futile attempts.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Real or Fake
+</div>
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 69%; top: 25%; height: 60%; width: 28%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 3%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Great White Shark And Cage
+
+<img src="Camp/attachments/b5ed8532f6f18bad8fd08f1ab80e385a_MD5.jpg" alt="" style="width: px; height: 200px; object-fit: fill">
+
+
+</div>
+
+  
+
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><p>#real<br>Most dive locations featuring great white sharks require the divers to remain in a cage for safety reasons. The cages have gaps in-between the metal bars.</p>
+<p> This curious shark is trying to get in through one of the gaps in the cage maybe for a close look at the divers or something else…</p>
+</aside></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":540,"margin":0,"maxScale":1,"controls":true,"progress":true,"slideNumber":true,"overview":"true","showNotes":false,"transition":"convex","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>

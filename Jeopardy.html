@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+###### Here is the Question:<!-- .element: ="margin:2pt;border-bottom:2pt solid white;" --> 
+512 we know about and 23 we are not sure about
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol>
+<li>How many types of sharks are there?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+The Whale shark, but the Megalodon was bigger.  
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="2">
+<li>What type of shark can grow up to 18 meters long?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+20 meters
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="3">
+<li>How long was the megalodon?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+5-15,  with up to 3000.
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="4">
+<li>How many rows of teeth do sharks have, and how many teeth?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+ Pups
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="5">
+<li>What are shark babies called?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+These help sharks feel electricity.
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="6">
+<li>What are ampullae?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+These help with steering and provide lift
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="7">
+<li>What do the pectoral fins do?</li>
+</ol>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+No, cartilage
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="8">
+<li>Do sharks have bones?</li>
+</ol>
+</aside></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+Like other fish, they get it from the water through their slits called gills.
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="9">
+<li>How do sharks get oxygen to breathe?</li>
+</ol>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+Almost anything, including fish, shellfish, other sharks
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="10">
+<li>What do Hammerhead sharks eat?</li>
+</ol>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+15,000 kilograms
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="11">
+<li>How much can a whale shark weigh?</li>
+</ol>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.reveal .slide-number {
+top:20px;
+right: 5vw;
+font-size: xxx-large;
+color: lightcyan;
+height: fit-content;
+background: maroon;
+position: abso;
+}
+</style>
+
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  **Spring Camp 2024**  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ <!-- .element: style="font-weight: 300" --> 
+</div>
+<div class="has-dark-background" style="background-color: forestgreen; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 10%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+Shark Jeopardy!
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 35%; top: 25%; height: 60%; width: 64%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+###### Find the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+<ol style="font-size: 12pt;">
+<li>How many types of sharks are there?  </li>
+<li>What type of shark can grow up to 18 meters long?  </li>
+<li>How long was the megalodon? </li>
+<li>How many rows of teeth do sharks have, and how many teeth? </li>
+<li>What are shark babies called? </li>
+<li>What are ampullae? </li>
+<li>What do the pectoral fins do? </li>
+<li>Do sharks have bones? </li>
+<li>How do sharks get oxygen to breathe? </li>
+<li>What do Hammerhead sharks eat? </li>
+<li>How much can a whale shark weigh? </li>
+<li>What type of shark never attacks people? </li>
+</ol>
+
+
+</div>
+
+<div class="has-dark-background" style="border-radius: 15px; background-color: blue; position: absolute; left: 3%; top: 25%; height: 60%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 50%; width: 25%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+###### Here is the Question:<!-- .element: style="margin: 2pt; border-bottom: 2pt solid white" --> 
+The whale shark only eats plankton.
+
+ <!-- .element: style="font-size: 20pt" -->
+
+</div>
+
+
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+</style>
+
+<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Spring Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" -->
+</div>
+</div>
+
+<aside class="notes"><ol start="12">
+<li>What type of shark never attacks people?</li>
+</ol>
+</aside></script></section></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":540,"margin":0,"maxScale":4,"controls":true,"progress":true,"slideNumber":true,"overview":"true","showNotes":false,"transition":"concave","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>

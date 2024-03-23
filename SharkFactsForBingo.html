@@ -1,0 +1,232 @@
+<html>
+<head>
+  <title>Shark Facts for Bingo</title>
+  <style>
+    
+:root {
+  --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+  --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --text-error: #E4374B;
+  --background-primary-alt: '#fafafa';
+  --background-accent: '';
+  --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+  --background-modifier-error: #E4374B;
+}
+
+    body,input {
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+code, kbd, pre {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+}
+
+pre {
+  padding: 1em 0.5em;
+}
+
+table {
+  background: white;
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+table thead th,
+table tfoot th {
+  text-align: left;
+  background-color: #eaeaea;
+  color: black;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+table td {
+  color: #222222;
+}
+
+.callout[data-callout="abstract"] .callout-title,
+.callout[data-callout="summary"] .callout-title,
+.callout[data-callout="tldr"]  .callout-title,
+.callout[data-callout="faq"] .callout-title,
+.callout[data-callout="info"] .callout-title,
+.callout[data-callout="help"] .callout-title {
+  background-color: #828ee7;
+}
+.callout[data-callout="tip"] .callout-title,
+.callout[data-callout="hint"] .callout-title,
+.callout[data-callout="important"] .callout-title {
+  background-color: #34bbe6;
+}
+.callout[data-callout="success"] .callout-title,
+.callout[data-callout="check"] .callout-title,
+.callout[data-callout="done"] .callout-title {
+  background-color: #a3e048;
+}
+.callout[data-callout="question"] .callout-title,
+.callout[data-callout="todo"] .callout-title {
+  background-color: #49da9a;
+}
+.callout[data-callout="caution"] .callout-title,
+.callout[data-callout="attention"] .callout-title {
+  background-color: #f7d038;
+}
+.callout[data-callout="warning"] .callout-title,
+.callout[data-callout="missing"] .callout-title,
+.callout[data-callout="bug"] .callout-title {
+  background-color: #eb7532;
+}
+.callout[data-callout="failure"] .callout-title,
+.callout[data-callout="fail"] .callout-title,
+.callout[data-callout="danger"] .callout-title,
+.callout[data-callout="error"] .callout-title {
+  background-color: #e6261f;
+}
+.callout[data-callout="example"] .callout-title {
+  background-color: #d23be7;
+}
+.callout[data-callout="quote"] .callout-title,
+.callout[data-callout="cite"] .callout-title {
+  background-color: #aaaaaa;
+}
+
+.callout-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: center;
+}
+
+svg.svg-icon {
+  height: 18px;
+  width: 18px;
+  stroke-width: 1.75px;
+}
+
+.callout {
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.callout-title {
+  padding: .5em;
+  display: flex;
+  gap: 8px;
+  font-size: inherit;
+  color: black;
+  line-height: 1.3em;
+}
+
+.callout-title-inner {
+  font-weight: bold;
+  color: black;
+}
+
+.callout-content {
+  overflow-x: auto;
+  padding: 0.25em .5em;
+  color: #222222;
+  background-color: white !important;
+}
+
+ul.contains-task-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.contains-task-list ul.contains-task-list {
+  padding-left: 2em;
+}
+
+ul.contains-task-list li input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+.callout-table,
+.callout-table tr,
+.callout-table p {
+  width: 100%;
+  padding: 0;
+}
+
+.callout-table td {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.callout-table p {
+  padding-bottom: 0.5em;
+}
+
+.source-table {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+  </style>
+</head>
+<body>
+<div><h2 data-heading="Goblin Sharks">Goblin Sharks</h2>
+<p><img alt="Goblin Shark" src="https://factanimal.com/wp-content/uploads/2022/12/goblin-shark.jpg" referrerpolicy="no-referrer"></p>
+<h3 data-heading="1. They’re pink!">1. They’re pink!</h3>
+<p>Not really, but their skin is thin, so it looks pink</p>
+<h3 data-heading="2. They grow into their noses">2. They grow into their noses</h3>
+<h3 data-heading="3. They have atrophied bodies">3. They have atrophied bodies</h3>
+<h3 data-heading="4. Their teeth jump out">4. Their teeth jump out</h3>
+<p>Their teeth lock down under pressure, and spring out to attack. They can open and reclose them easily.</p>
+<h3 data-heading="Basking Shark">Basking Shark</h3>
+<ul>
+<li>2nd larget living fish</li>
+<li>look like they are "basking" but are really eating</li>
+<li>Have sharp teeth, don't use them: they are filter feeders (1 of only 3 filter feeders)</li>
+<li>start 90ft below to water to leap out 4 ft at 11mph. </li>
+<li>WHY do they leap? mating, cleaning, communication</li>
+</ul>
+<h2 data-heading="Blue Shark">Blue Shark</h2>
+<p><img alt="Blue Shark riding currents" src="https://factanimal.com/wp-content/uploads/2023/05/blue-shark-at-sea-where-else.jpg" referrerpolicy="no-referrer"></p>
+<h3 data-heading="Live young">Live young</h3>
+<h3 data-heading="big, but docile, eat small fish">big, but docile, eat small fish</h3>
+<h3 data-heading="migrate long distances with wave riding fins">migrate long distances with wave riding fins</h3>
+<h3 data-heading="Males and females live separately most of the time">Males and females live separately most of the time</h3>
+<h2 data-heading="Great White">Great White</h2>
+<h2 data-heading="Greenland Shark">Greenland Shark</h2>
+<h3 data-heading="1. Greenland sharks are really, really big">1. Greenland sharks are really, really big&nbsp;</h3>
+<h3 data-heading="2. The&nbsp;meat of a Greenland shark&nbsp;is poisonous, so of course, people in Iceland eat it (by curing it for months)">2. The&nbsp;meat of a Greenland shark&nbsp;is poisonous, so of course, people in Iceland eat it (by curing it for months)</h3>
+<h2 data-heading="Longest living things">Longest living things</h2>
+<h3 data-heading="Longest-living land mammal – Human beings">Longest-living land mammal – Human beings</h3>
+<p><img alt="Jeanne Calment the longest-living human ever sits in a chair outside" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Jeanne-calment.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>Jeanne Calment pictured in 1995, at the age of 120. </p>
+<h3 data-heading="Longest-living aquatic creature – Glass sponge">Longest-living aquatic creature – Glass sponge</h3>
+<p><img alt="flower-like sponge on sea floor" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/venus_flower_glass_sponge.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>Bolosoma stalked glass sponges (Hexactinellid)s are one of the longest-living organisms on Earth. Despite their delicate appearance, it is estimated that they can live up to 15,000 years. </p>
+<h3 data-heading="Longest-living bird – Cookie the cockatoo">Longest-living bird – Cookie the cockatoo</h3>
+<p><img alt="Very old pink cockatoo sits on a branch" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Cookie-Cockatoo-Oldest.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>The longest-living bird on record is Cookie, a male pink cockatoo (<em>Cacatua leadbeateri</em>), who lived in captivity at Brookfield Zoo, Chicago, USA. Incredibly, Cookie outlived the next longest-living pink cockatoo by 52 years.</p>
+<h3 data-heading="Longest-living rodent – Naked mole rat">Longest-living rodent – Naked mole rat</h3>
+<p><img alt="Naked mole rat in a burrow" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Naked-Mole-Rat.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>The naked mole rat can survive for 18 minutes without oxygen and is also resistant to many types of cancer. In 2020, it was reported that one male individual turned 37 years old, which makes it easily the longest-living rodent on Earth.</p>
+<h3 data-heading="Longest-living invertebrate – Ocean quahog">Longest-living invertebrate – Ocean quahog</h3>
+<p><img alt="Two sides of a clam shell on piece of paper" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Ming-Hafrun-Quahog.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>The oldest ocean quahog, thought to be over 500 years old and known as 'Ming'. </p>
+<h3 data-heading="Longest-living tortoise – Aldabra giant tortoise">Longest-living tortoise – Aldabra giant tortoise</h3>
+<p><img alt="giant tortoise rests on sandy ground" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Aldabra-giant-tortoise.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>Adwaita the giant Aldabra tortoise resting inside its cage at the Alipore Zoological Garden in Kolkata, India,was thought to be 255 years old when he died at Alipore Zoological Garden, Kolkata, India in 2006. Adwaita was thought to have hatched in 1750 and had lived a solitary life at the zoo for over 100 years.</p>
+<h3 data-heading="Longest-living dog – Bobi">Longest-living dog – Bobi</h3>
+<p><img alt="close-up of old brown dog with tongue hanging out" src="https://c02.purpledshub.com/uploads/sites/41/2024/01/Bobi-Oldest-Dog.jpg?fit=800%2C534&amp;webp=1&amp;w=1200" referrerpolicy="no-referrer"></p>
+<p>Bobi, a purebred Rafeiro do Alentejo dog hit an incredible 31 years of age before shuffling off this mortal coil in October 2023. Rafeiro do Alentejos are native to Portugal and are known to be calm in nature and make great guard dogs. </p></div>
+</body>
+</html>

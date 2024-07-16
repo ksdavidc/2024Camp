@@ -1,0 +1,3141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## [38 Of the Most Fascinating Public Sculptures](https://www.architecturaldigest.com/gallery/11-most-fascinating-public-sculptures)
+
+From Marseille, France, to Melbourne, Australia, to Vancouver to New York City, _AD_ surveys the world’s most powerful public sculptures
+
+By [Nick Mafi](/contributor/nick-mafi) and [Jessica Cherner](/contributor/jessica-cherner)
+
+</div>
+
+  
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+
+November 22, 2019
+
+Sometime during the past few centuries, one could argue that the knowledge and appreciation of art surpassed that of religion for the educated classes. Sure, people still associate and practice the many forms: Catholicism, Judaism, Islam, to name a few. But for many more, perhaps, it is art that they look upon religiously. And though commissioned public artwork has been part of our culture for centuries, it now seems more omnipresent than ever. The meaning and impact of a commissioned work can change the fabric of a street corner or city—think: Chicago’s famous _Bean_ or New York’s iconic _Knotted Gun_. From the bustling streets of major U.S. cities to quieter corners of the globe in Howick, South Africa, and Las Colinas, Texas, _Architectural Digest_ surveys 38 of the world’s most fascinating public sculptures. Each one responds to a cultural curiosity—a question that was asked by a group or city officials and answered by the artists.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In front of Buildings Clear day](https://media.architecturaldigest.com/photos/5e95f8d0edda05000872a01a/master/c_limit/M39BHF.jpg)
+
+Photo: Faina Gurevich/Alamy
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+1/38
+
+### _Forever Bicycles_ In Austin, Texas
+
+Ai Weiwei’s _Forever Bicycles_ used to draw the eye in Waller Beach at Town Lake Metropolitan Park in Austin. This 3D sculpture was created from 1,200 bicycles, a vehicle the artist used throughout his childhood in Beijing to move throughout the city. This work representing childhood and freedom was not destined to stay in Austin forever: It was eventually taken down in May 2017, as the city was no longer able to fund the beloved installation.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Turning in the wind](https://media.architecturaldigest.com/photos/5e95e05156cb9400080cdc4a/master/c_limit/GettyImages-157876742.jpg)
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+2/38
+
+### _Singing Ringing Tree_ in Burnley, United Kingdom
+
+Completed in 2006, the _Singing Ringing Tree_ is a 10-foot-tall sculpture meant to resemble the shape and grace of an actual tree. The structure, which was designed by artists Mike Tonkin and Anna Liu, was built using galvanized steel, and it was placed in such a way that when the wind rushes through, a song is produced. Located in the Pennine hill range overlooking Burnley, England, the sculpture won the National Award of the Royal Institute of British Architects (RIBA) in 2007.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![bridge Near Water and Skyscrapers in distance](https://media.architecturaldigest.com/photos/5cfec0bbb451b3bf601addbc/master/c_limit/GettyImages-1128984358.jpg)
+
+Photo: Getty Images/Christina Horsten
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+3/38
+
+### _Bridge Over Tree_ in Brooklyn, New York
+
+Located in New York’s Brooklyn Bridge Park, _Bridge Over Tree_ is a sculptural installation designed by Iranian-born and Minneapolis-based artist Siah Armajani. The work was first shown as a temporary sculpture in Minneapolis in 1970, and was again on view in 2019 for the first time in nearly 50 years. It comprises a 91-foot-long bridge and a set of stairs at the sculpture’s midpoint. These stairs send visitors up and down over a small evergreen tree. The sculpture was designed to force complete strangers to pass, interact, and cooperate with one another when passing the center of the structure. In a moment of heated political disagreement, finding common ground with any stranger is a welcome change.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![statue Of a Race Car driver](https://media.architecturaldigest.com/photos/5db358ad868e940009b6f78b/master/c_limit/T7R124.jpg)
+
+Photo: Roman Belogorodov/Alamy Stock Photo
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+4/38
+
+### _Ayrton Senna_ In Barcelona, Spain
+
+Brazilian-born Formula 1 driver Ayrton Senna was killed during a 1994 race in Italy. His funeral, which took place in São Paulo, is believed to be one of the largest recorded gatherings of mourners: An estimated 3 million people flocked to the streets of Senna’s hometown to pay their respects. A figure who always seemed larger than life, Senna is now memorialized in a sculpture in Barcelona. Created by British artist Paul Oz, the work of art was unveiled on May 8, 2019, marking the 25th anniversary of Senna’s death.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![People Standing in front of a Large Red View TM Sign on top of a cliff](https://media.architecturaldigest.com/photos/5b56086de14c6667d61805bc/master/c_limit/GettyImages-598570498.jpg)
+
+Photo: JDwow/Getty Images  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+5/38
+
+### _View TM_ In Sydney, Australia
+
+Since 1997, visitors to and residents of Sydney have enjoyed the annual event, Sculpture by the Sea. Located on the famous Bondi beach, the event features 100 sculptures by artists from around the world. Visitors to the public event will enjoy sculptures similar to the one above. _View TM_ is a tongue-in-cheek comment on the vista from the top of a picturesque cliff.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![Statue Of Bear and Tree at Dusk with Buildings in the background](https://media.architecturaldigest.com/photos/5b5607b3cf0274743d8d0e0b/master/c_limit/GettyImages-507075558.jpg)
+
+Photo: Getty Images/kasto80  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+6/38
+
+### _The_ _Statue Of the Bear and the Strawberry Tree_ in Madrid, Spain
+
+Located in central Madrid and designed by the Spanish sculptor Antonio Navarro Santafé, _The_ _Statue of the Bear and the Strawberry Tree_ is a 1967 work that represents Madrid’s coat of arms. The statue, located in a public square called Puerta del Sol, is made of stone and bronze, and it’s 13 feet tall.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![Racing Cars Stacked on Each other for sculpture](https://media.architecturaldigest.com/photos/5db358b075abb50008d6ddd8/master/c_limit/C76J4D.jpg)
+
+Photo: Philipp Zechner/Alamy Stock Photo
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+7/38
+
+## Ferrari Statue in Imola, Italy
+
+Located some 25 miles east of Bologna, Italy, the Autodromo Internazionale Enzo e Dino Ferrari is a racetrack near the Italian town of Imola. Although the racetrack is known for its many exciting races and the compelling statue outside it (pictured), it’s unfortunately also known as the place where internationally beloved Formula 1 driver Ayrton Senna died after a crash during a race.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In a Park with a Woman Standing Infront of it under an umbrella](https://media.architecturaldigest.com/photos/59540f4b0e5edb0bd3c6d9b2/master/c_limit/Force%2520of%2520Nature.jpg)
+
+Photo: Oli Scarff/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+8/38
+
+### _Force Of Nature_ in London, United Kingdom
+
+_Force of Nature_, which is located in several major cities around the globe, was designed by Italian artist Lorenzo Quinn. He was inspired by the destruction brought on by hurricanes around the globe. Made from bronze, stainless steel, and aluminum, _Force of Nature_ depicts Mother Nature hurling the planet in circles. The sculpture seen in the picture is located in London.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![statue Of a Man with no Head atop of Him a Smaller Man on His shoulders](https://media.architecturaldigest.com/photos/59540e4509b582740691a7ab/master/c_limit/Franz%2520Kafka%2520Statue.jpg)
+
+Photo: Frank Bienewald/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+9/38
+
+### _Statue Of Franz Kafka_ in Prague, Czech Republic
+
+Designed by the Czech sculptor Jaroslav Róna, _Statue of Franz Kafka_ is based on a scene from Kafka’s first novel, _Amerika_ (1927), in which a political candidate is carried on the shoulders of a giant man during a rally. Located in Prague, the work of art was completed in 2003.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![two Sculptures of Men Missing part of Their Body near the water](https://media.architecturaldigest.com/photos/5699809f12582c256882a284/master/c_limit/11-most-fascinating-public-sculptures-01.JPG)
+
+Photo: Courtesy of Bruno Catalano  
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+10/38
+
+### _Les Voyageurs_ In Marseille-Fos Port, France
+
+_Les Voyageurs_, by French artist Bruno Catalano, in Marseille, France, is an enigmatic sculpture thought to evoke memories and parts of themselves that every traveler inevitably leaves behind when they leave home for a new shore.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![shoes Next to a River with a Bridge in the background](https://media.architecturaldigest.com/photos/585952baaf24df7e68435c0b/master/c_limit/Most%2520Fascinating%2520Public%2520Sculptures%25202.jpg)
+
+Photo: Ferenc Isza/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+11/38
+
+### _The Shoes on the Danube Bank_ in Budapest, Hungary
+
+Created by Can Togay and Gyula Pauer, _The Shoes on the Danube Bank_ in Budapest is a 2005 work that commemorates the hundreds of Hungarians who were ordered to leave their shoes on the bank of the river before they were shot during the Holocaust.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Children Jumping into a river](https://media.architecturaldigest.com/photos/5699817bc6772b761456746a/master/c_limit/11-most-fascinating-public-sculptures-05.jpg)
+
+Photo: Wibowo Rusli/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+12/38
+
+### _First Generation_ In Singapore
+
+_First Generation_ by Chong Fah Cheong, which was commissioned by the Singapore Tourism Board, depicts a spirited group of boys jumping into the Singapore River.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of a Spider next to Two Museum visitors](https://media.architecturaldigest.com/photos/5a397018cf0d6c31eb82edcb/master/c_limit/Louise%2520Bourgeouis.jpg)
+
+Photo: Karl Thomas/Getty Images  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+13/38
+
+### _Maman_ In Bilbao, Spain
+
+Much of the work of Louise Bourgeois (1911–2010) is meant to bring the concepts of jealousy, anger, fear, and her own painful childhood to the public eye. Her sculpture _Maman_ is no exception. Located in front of the Guggenheim Museum in Bilbao, Spain, this 30-foot-tall structure shows the strength and fragility associated with maternity. The terrifying spider is both powerful and tall while balancing on the slenderest of legs and thus extremely vulnerable.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of a Spoon with Cherry on the End of it next to a lake](https://media.architecturaldigest.com/photos/59cd6b47951aad3ca68c6185/master/c_limit/Spoonbridge%2520and%2520Cherry.jpg)
+
+Photo: Raymond Boyd/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+14/38
+
+### _Spoonbridge And Cherry_ in Minneapolis, Minnesota
+
+Claes Oldenburg and Coosje van Bruggen’s _Spoonbridge and Cherry_ sculpture at the Minneapolis Sculpture Garden is both playful and beautiful.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of a Clothespin at Dusk with Building in the background](https://media.architecturaldigest.com/photos/59cd6d4c6f18e709d191740d/master/c_limit/Claes%2520Oldenburg%2C%2520Clothespin.jpg)
+
+<img src="Photo: John Greim/Getty Images" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+15/38
+
+### _Clothespin_ In Philadelphia, Pennsylvania
+
+Designed by the Swedish-born sculptor Claes Oldenburg, the _Clothespin_ sculpture sits near Philadelphia’s City Hall. The work of art was completed in 1976 to celebrate the U.S. bicentennial.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Head Emerging from the Ground with Building in the background](https://media.architecturaldigest.com/photos/5a14a1224fe7740c1ee75bfd/master/c_limit/Giant%2520Ogre%2520Sculpture.jpg)
+
+Photo: Getty Images/Alex Quesada
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+16/38
+
+### _Popped Up_ In Budapest, Hungary
+
+Designed by the Hungarian artist Ervin Hervé-Lóránth, _Popped Up_ is a giant sculpture that appears to be crawling out of the earth. The sculpture is located in Széchenyi Square in Budapest.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture To a Series of Rods that come together to Create Nelson Mandela's face](https://media.architecturaldigest.com/photos/5a39795b38bb817b7ffe1e09/master/c_limit/nelson%2520mandela.jpg)
+
+Photo: RAJESH JANTILAL/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+17/38
+
+### _Release_ In Howick, South Africa
+
+_Nelson Mandela_ by Marco Cianfanelli is located near Howick, South Africa. The sculpture was commissioned by Cultural Mechanics, a group that funds cultural projects for governments around the world. Cianfanelli’s work is positioned along the road where Mandela was captured by apartheid security police in 1962. After his arrest, Mandela spent the next 27 years in prison.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![statue Of Whale with City and Mountains in the background](https://media.architecturaldigest.com/photos/5a397a2235ab657ae479764e/master/c_limit/orca.jpg)
+
+Photo: Michael Wheatley/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+18/38
+
+### _Digital Orca_ In Vancouver, Canada
+
+Both beautiful and bizarre, _Digital Orca_ by Douglas Coupland is a 2009 work of digital-looking art. It was commissioned by the city of Vancouver to overlook the harbor and the mountains of Cypress Provincial Park. Composed of steel armature with aluminum cladding and black and white cubes, the sculpture has become an attraction for tourists and locals alike.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Red Balloon next to fountains](https://media.architecturaldigest.com/photos/5a397a94cf0d6c31eb82edcf/master/c_limit/jeff%2520koons.jpg)
+
+<img src="Photo: Raymond Boyd/Getty Images" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+19/38
+
+### _Balloon Flower (Red)_ in New York, New York
+
+The public Jeff Koons sculpture is set in the shadow of the new World Trade Center in New York City. _Balloon Flower (Red)_ was commissioned by Larry Silverstein, the businessman who famously signed a lease for the original towers several months before the 9/11 attacks.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Mustangs Running through fountain](https://media.architecturaldigest.com/photos/5a397b5e35ab657ae4797650/master/c_limit/Las%2520Colinas.jpg)
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+20/38
+
+### _Mustangs_ In Las Colinas, Texas
+
+_Mustangs_ by Robert Glen is an impressive bronze sculpture that was commissioned by the city of Las Colinas, Texas. The work depicts nine wild mustangs galloping through a fountain.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Building Coming out from the sidewalk](https://media.architecturaldigest.com/photos/5a397c7635ab657ae4797652/master/c_limit/state%2520library%2520victoria.jpg)
+
+Photo: David Messent/Getty Images  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+21/38
+
+### _The Architectural Fragment_ in Melbourne, Australia
+
+Located in Melbourne, _The Architectural Fragment_ by Petrus Spronk is seemingly buried underground before the State Library of Victoria. It’s meant to symbolize the downfall of civilization while alluding to the transience of the present. The city commissioned the work as part of a larger public art project in 1992.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Gun with Twisted Knot at the End of it](https://media.architecturaldigest.com/photos/5a397ce2cf0d6c31eb82edd3/master/c_limit/The%2520Knotted%2520Gun.jpg)
+
+Photo: ullstein bild/Getty Images  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+22/38
+
+### _Non-Violence_ In New York, New York
+
+_Non-Violence_ (also known as _The Knotted Gun_) by Carl Fredrik Reuterswärd is aptly located next to the United Nations in New York. The sculpture has come to represent hope for a nonviolent future. The piece—commissioned by Luxembourg as a gift for the U.N.—has been cited as one of the inspirations behind the arms-to-art movement.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Head that Turns at Various points](https://media.architecturaldigest.com/photos/5a39817135ab657ae4797654/master/c_limit/metalmorphosis.jpg)
+
+Photo: Michael Cizek/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+23/38
+
+### _Metalmorphosis_ In Charlotte, North Carolina
+
+Located in Charlotte and unveiled in 2007, _Metalmorphosis_ by David Černý is made from several layers of stainless steel that rotate 360 degrees, occasionally aligning to create a massive head.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Humans Coming out from the Wall of a building](https://media.architecturaldigest.com/photos/5a398d46cf0d6c31eb82ede8/master/c_limit/unnamed%2520(4.jpg)
+
+
+Photo: Zenos Frudakis
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+24/38
+
+### _Freedom Sculpture_ In Philadelphia, Pennsylvania
+
+_Freedom Sculpture_ is a 2001 piece designed by Zenos Frudakis, located in Philadelphia. The 7,000-pound and 20-foot-long bronze piece depicts the struggle involved in breaking free from all that holds us back.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Finger Coming out of the Ground with Stairs in the background](https://media.architecturaldigest.com/photos/5a398dee35ab657ae4797665/master/c_limit/paris.jpg)
+
+Photo: Chesnot/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+25/38
+
+### _Le Pouce_ In Paris, France
+
+Designed by French artist César Baldaccini, _Le Pouce_ is a giant bronze thumb that stands outside of the Centre Pompidou. The sculpture embodies one of Baldaccini’s favorite themes: The fantastical representation of humans, animals, and insects.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of a Horse's Head on a Hilltop with Two People Looking at it](https://media.architecturaldigest.com/photos/5bfc0d22f448d42dde2204f7/master/c_limit/GettyImages-808688842.jpg)
+
+Photo: Chris Ison/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+26/38
+
+### Horse Head in West Sussex, United Kingdom
+
+Designed by the British-born artist Nic Fiddian-Green, this sculpture of a horse’s head stands some 35 feet tall. Located in West Sussex, England, the imposing figure comes from the ancient Greek figure Artemis. The daughter of Zeus and Leto, Artemis is the goddess of hunting and wilderness.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of Man Sitting next to a tree](https://media.architecturaldigest.com/photos/5a398e5638bb817b7ffe1e20/master/c_limit/Calgary%2C%2520Alberta%2C%2520Canada.jpg)
+
+Photo: Michael Wheatley/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+27/38
+
+### _Alberta’s Dream_ In Alberta, Canada
+
+_Alberta’s Dream_, a statue by the Spanish-born artist Jaume Plensa, is located in Alberta, Canada. The work of art is highly political, and many seem to have differing views on its true meaning. Yet that’s what makes Plensa’s work special, as it starts a conversation that might otherwise have not existed.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture Of the Reflective Bean in Chicago on a Clear day](https://media.architecturaldigest.com/photos/5a626ac8d85eba67eecd9c16/master/c_limit/GettyImages-171109795.jpg)
+
+Photo: espiegle/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+28/38
+
+### _Cloud Gate_ In Chicago, Illinois
+
+_Cloud Gate_ by Anish Kapoor is one of Chicago’s landmarks. This 110-ton elliptical sculpture (also known as the Bean) is located in Millennium Park and reflects Chicago’s famous skyline—as well as visitors as they walk under the 12-foot-high arch. Inspired by liquid mercury, the sculpture measures 66 feet long and 33 feet high.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![Image May Contain Water Nature Outdoors Land Ocean Sea Shoreline and Pond](https://media.architecturaldigest.com/photos/61d127037dd6aa6938548c4d/master/c_limit/1163766020)
+
+Photo: LucaLorenzelli/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+29/38
+
+### _Colosso dell’Appennino_ In Florence, Italy
+
+Though it looks like _Colosso dell’Appennino_ is settled in his solitude, guarding the pond behind which he resides, there used to be one of many sculptures. Sadly, most were either destroyed or stolen. The brick and stone Colosso remains, nearly 500 years after Flemish sculptor Giambologna sculpted him, because he’s so enormous and sturdy. 
+
+The romantic park was constructed as part of Francesco de’ Medici’s mistress’ estate, and Colosso was added years later to both watch over the park and remind visitors that man and nature are more connected than people may assume.  
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In a city](https://media.architecturaldigest.com/photos/61d11bd37722bb93cd3c21d3/master/c_limit/147830033)
+
+Photo: Steve Rose/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+30/38
+
+### _ArcelorMittal Orbit_ In London, United Kingdom
+
+Most sculptures offer the public little more than something beautiful to look at, but _ArcelorMittal Orbit_ in London by sculptor Sir Anish Kapoor and engineer Cecil Balmond gives visitors—especially children—much more. The United Kingdom’s tallest sculpture, standing proud in Queen Elizabeth Olympic Park, features the world’s longest and tallest tunnel slide. Plus, its construction consisted of enough steel to make 265 double-decker buses. 
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![car And Dog Sculptor in city](https://media.architecturaldigest.com/photos/61d11da60e04f50aa219d27c/master/c_limit/1029688890)
+
+Photo: Getty Images  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+31/38
+
+### _Spot_ In New York, New York
+
+After a long renovation at NYU Langone Hospital in New York City, American sculptor Donald Lipski unveiled a 30-foot-tall dalmatian balancing a life-size taxi on his nose. Though _Spot_ is there to greet everyone going into the hospital, Lipski designed it specifically for the brave children about to endure a challenging procedure. His goal was to create something so awe-striking that it would distract anyone from their chronic conditions—even for just a moment. 
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In city](https://media.architecturaldigest.com/photos/61d11c1c9d0d88869755977d/master/c_limit/913665656)
+
+Photo: Getty Images/Ant Palmer  
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+32/38
+
+### _Tiger & Turtle: Magic Mountain_ in Duisburg, Germany
+
+From afar, _Tiger & Turtle: Magic Mountain_ looks like a traditional winding roller coaster, but there are actually no carts or mechanics. Artists Heike Mutter and Ulrich Genth’s monumental sculpture is completely walkable. Though the views are quite impressive, the best time to pay _Tiger & Turtle: Magic Mountain_ a visit is after the sun sets. That’s when the structure is lit by 880 LED lights, making itself known from quite far away.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In city](https://media.architecturaldigest.com/photos/61d1241bed6976ea1097d05b/master/c_limit/Yayoi-Kusama-Hymn-of-Life-Tulips.jpeg)
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+Photo: Getty Images
+
+33/38
+
+### _Hymn Of Life: Tulips_ in Beverly Hills, California
+
+In 2007, famed Japanese artist Yayoi Kusama installed a collection of painted fiberglass sculptures in the shape of funky tulips in the Beverly Gardens Park in Beverly Hills. But shortly after the collection was revealed to the public, it suffered immense water damage, so Kusama’s gallery in Tokyo worked alongside engineers and city officials to recreate exact replicas in stainless steel. They do, in fact, look identical to the originals, bearing Kusama’s signature polka dots and youthful colors.
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In city](https://media.architecturaldigest.com/photos/61d1255772eab637e7ebee82/master/c_limit/146322296)
+
+Photo: Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+34/38
+
+### _The Ecstasy of Saint Teresa_ in Rome, Italy
+
+Generally considered one of the few sculptural masterpieces of High Roman Baroque, renowned 17th-century artist Gian Lorenzo Bernini’s white marble _L’Estasi di Santa Teresa_ or _Santa Teresa in estasi_ is the centerpiece in Santa Maria della Vittoria’s Cornaro Chapel in Rome. The sculpture depicts the Spanish nun Teresa of Ávila, one of the most notable figures during the 16th- and early 17th-century Catholic Reformation. 
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![stairs Near water](https://media.architecturaldigest.com/photos/61d127d87dd6aa6938548c4f/master/c_limit/185683902)
+
+Photo: Cameron Spencer/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+35/38
+
+### _Diminish And Ascend_ in Christchurch, New Zealand
+
+Artist David McCracken designed his _Diminish and Ascend_ to resemble a never-ending staircase that goes straight into the clouds. And, from certain angles, it takes on that appearance. He designed the piece for an annual art show known as Sculpture by the Sea in Bondi, Australia, but after the show closed, the aluminum staircase was moved to its new home in Kiosk Lake in Christchurch Botanic Gardens in New Zealand. Calling this piece an optical illusion almost seems like an understatement. 
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In city](https://media.architecturaldigest.com/photos/61d85896b02d995d86605dcc/master/c_limit/803237014)
+
+Photo: Anadolu Agency/Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+36/38
+
+### _Čumil_ In Bratislava, Slovakia
+
+Contrary to popular belief, Čumil isn’t this bronze statue’s name. It’s the Slovak word for “watcher,” which makes sense considering his position peeking out of a manhole and the sly grin on his face. _The Watcher_, by local sculptor Viktor Hulík, is one of several public works commissioned by the city after Slovakia gained independence in 1947. 
+
+Because he’s so low to the ground, the watcher actually lost his head twice, courtesy of a few careless drivers. Now, however, he has his own road sign, ironically reading “Man at work.”
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![statue In a city](https://media.architecturaldigest.com/photos/625718819aeca252b1009a04/master/c_limit/GettyImages-611391436.jpg)
+
+Photo: Getty Images
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+37/38
+
+### _Really Good_ In London, United Kingdom
+
+In London’s Trafalgar Square, home to the city’s National Gallery and National Portrait Gallery, a unique sculpture greets visitors as they stroll through the always-crowded square. _Really Good_, a 23-foot-tall bronze hand in the shape of a thumbs-up by Turner Prize–nominated artist David Shrigley, is supposed to serve as a small step in making the world a better place. The artist called it “a ridiculous but good proposition.” 
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 540px; width: 960px; min-height: 540px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+.horizontal_dotted_line {
+  border-bottom: 2px dotted gray;
+} 
+.reveal p, .reveal h2, .reveal h3, .reveal {font-size : 12pt}
+
+
+.reveal .slides>section .block img  {max-width: 70vw;max-height: 50vh; }
+</style>
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐⭐ ⭐  **Summer Camp 2024**  ⭐ ⭐ ⭐ ⭐  ⭐ <!-- .element: ="font-weight:300" --> 
+</div>
+
+
+
+<div class="has-dark-background" style="background-color: maroon; position: absolute; left: 0%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+## ![sculpture In a city](https://media.architecturaldigest.com/photos/625719d8871b6395a5dde304/master/c_limit/GettyImages-1206557390.jpg)
+
+Photo: Getty Images 
+
+</div>
+
+
+
+</div>
+
+
+<div class="has-light-background" style="border-radius: 15px; background-color: pink; position: absolute; left: 70%; top: 10%; height: 90%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+</div>
+
+<div class="" style="color: red; overflow-y: scroll; position: absolute; left: 71%; top: 10%; height: 89%; width: 29%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+
+
+
+38/38
+
+### _Nagasaki Peace Statue_ in Nagasaki, Japan
+
+So many public sculptures double as monuments to a tragic event as a way to pay homage to victims, and the nearly 32-foot-tall _Nagasaki Peace Statue_ is hardly an exception. At its base, there’s a black vault holding the names of those killed after the 1945 atomic bomb exploded. Revealed to the public on April 1 in 1955, the city hosts an annual memorial service at the foot of the statue.
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+
+</div>
+
+
+<div class="has-dark-background" style="background-color: blue; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+</div>  
+
+
+<!--<div class="" style="position: absolute; left: 0%; top: 90%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐  Summer Camp 2024  ⭐ ⭐ ⭐ ⭐ ⭐ ⭐  <!-- .element: style="font-weight: 300" --><!--
+</div>
+-->
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":540,"margin":0,"maxScale":4,"controls":true,"progress":true,"slideNumber":true,"overview":"true","showNotes":false,"transition":"concave","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
